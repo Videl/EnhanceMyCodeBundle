@@ -2,7 +2,7 @@ EnhanceMyCodeBundle
 ===================
 
 This is a Symfony Bundle. The Bundle manages source code, especially 'community' source code, like paste-it services.
-First of all, it allows people to post their code, with nice indentation, nice color, basically, probably [Pygments](http://pygments.org/) or some personnal color choice.
+First of all, it allows people to post their code, with nice indentation, nice color, basically, probably [Prettify](https://code.google.com/p/google-code-prettify/) or some personnal color choice.
 Secondly, people can browse/search/view the sources posted.
 And lastly, people can comment to improve the code, with a vote system to organize code based on factors such as *usefulness*, *easy-to-read*, *interesting-concept*, anything.
 
