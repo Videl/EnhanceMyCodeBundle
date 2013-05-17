@@ -1,0 +1,7 @@
+parameters:
+#    publish_my_code.example.class: Videl\PublishMyCodeBundle\Example
+
+services:
+#    publish_my_code.example:
+#        class: %publish_my_code.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
