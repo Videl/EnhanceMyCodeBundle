@@ -29,7 +29,6 @@ Techniques
     * Tags ``Tag`` [1-N]
     * VotePlus ``integer``
     * VoteMinus ``integer``
-    * EnjoymentPossibilites ``EnjoymentFactor`` [1-N]
  * Code Entity
     * Code ``text``
     * CodeDescriptions ``CodeDescriptor`` [1-N]
