@@ -1,0 +1,123 @@
+{# base.html.twig #}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>{% block title %}Erlang-Snippet{% endblock %}{% block following_title %}{% endblock %}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% stylesheets
+	'@PublishMyCodeBundle/Resources/public/css/bootstrap.min.css'
+	'@PublishMyCodeBundle/Resources/public/css/bootstrap-responsive.min.css'
+	%}
+    <link rel="stylesheet" href="{{ asset_url }}" media="screen" />
+{% endstylesheets %}
+    <style type="text/css">
+
+      /* Sticky footer styles
+      -------------------------------------------------- */
+
+      html,
+      body {
+        height: 100%;
+        /* The html and body elements cannot have any padding or margin. */
+      }
+
+      /* Wrapper for page content to push down footer */
+      #wrap {
+        min-height: 100%;
+        height: auto !important;
+        height: 100%;
+        /* Negative indent footer by it's height */
+        margin: 0 auto -60px;
+      }
+
+      /* Set the fixed height of the footer here */
+      #push,
+      #footer {
+        height: 60px;
+      }
+      #footer {
+        background-color: #f5f5f5;
+      }
+
+      /* Lastly, apply responsive CSS fixes as necessary */
+      @media (max-width: 767px) {
+        #footer {
+          margin-left: -20px;
+          margin-right: -20px;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }
+
+
+
+      /* Custom page CSS
+      -------------------------------------------------- */
+      /* Not required for template or sticky footer method. */
+
+      #wrap > .container {
+        padding-top: 60px;
+      }
+      .container .credit {
+        margin: 20px 0;
+      }
+
+      code {
+        font-size: 80%;
+      }
+
+    </style>
+</head>
+<body>
+
+    <!-- Part 1: Wrap all page content here -->
+    <div id="wrap">
+{% block navbar %}
+  {% include 'PublishMyCodeBundle:includes:navbar.html.twig' %}
+{% endblock %}
+
+
+<div class="container">
+{% block body %}
+
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit">
+        <h1>Hello, world!</h1>
+        <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+        <p><a href="hero.html#" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+      </div>
+
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="span4">
+          <h2>Heading</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn" href="hero.html#">View details &raquo;</a></p>
+        </div>
+        <div class="span4">
+          <h2>Heading</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn" href="hero.html#">View details &raquo;</a></p>
+       </div>
+        <div class="span4">
+          <h2>Heading</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p><a class="btn" href="hero.html#">View details &raquo;</a></p>
+        </div>
+      </div>
+
+{% endblock %}
+</div> {# container #}
+
+
+      <div id="push"></div>
+    </div>
+
+<div id="footer">
+  <div class="container">
+    <p class="muted credit">Example courtesy <a href="http://martinbean.co.uk">Martin Bean</a> and <a href="http://ryanfait.com/sticky-footer/">Ryan Fait</a>.</p>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+{% extends 'PublishMyCodeBundle::base.html.twig' %}
+
+{% block body %}
+<div class="row">
+	{% for post in posts %}
+	<div class="span4">
+		<h2>{{ post.title }} <small>{{ post.description }}</small></h2>
+<pre>
+-module(test);
+-export([start/0]);
+
+start() ->
+	coucou.
+{# post.code #}
+</pre>
+	</div>
+	{% endfor %}
+</div>
+{% endblock %}

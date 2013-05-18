@@ -1,3 +1,11 @@
 publish_my_code_homepage:
-    pattern:  /hello/{name}
+    pattern:  /
     defaults: { _controller: PublishMyCodeBundle:Default:index }
+
+publish_my_code_post_crud:
+    resource: '@PublishMyCodeBundle/Resources/config/routing/post.yml'
+    prefix:	/post
+
+publish_my_code_tag_crud:
+    resource: '@PublishMyCodeBundle/Resources/config/routing/tag.yml'
+    prefix: /tag
