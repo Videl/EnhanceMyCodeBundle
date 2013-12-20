@@ -2,9 +2,8 @@
 
 {% block body %}
 <div class="row">
-	{% for post in posts %}
 	<div class="span4">
-		<h2>{{ post.title }} <small>{{ post.description }}</small></h2>
+		<h2>{{ salut }}</h2>
 <pre>
 -module(test);
 -export([start/0]);
@@ -14,6 +13,5 @@ start() ->
 {# post.code #}
 </pre>
 	</div>
-	{% endfor %}
 </div>
 {% endblock %}
