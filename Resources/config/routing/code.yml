@@ -1,0 +1,30 @@
+code:
+    pattern:  /
+    defaults: { _controller: "PublishMyCodeBundle:Code:index" }
+
+code_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "PublishMyCodeBundle:Code:show" }
+
+code_new:
+    pattern:  /new
+    defaults: { _controller: "PublishMyCodeBundle:Code:new" }
+
+code_create:
+    pattern:  /create
+    defaults: { _controller: "PublishMyCodeBundle:Code:create" }
+    requirements: { _method: post }
+
+code_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "PublishMyCodeBundle:Code:edit" }
+
+code_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "PublishMyCodeBundle:Code:update" }
+    requirements: { _method: post|put }
+
+code_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "PublishMyCodeBundle:Code:delete" }
+    requirements: { _method: post|delete }
