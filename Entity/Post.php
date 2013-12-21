@@ -42,6 +42,18 @@ class Post
      */
     private $date;
 
+    /**
+     * @ORM\OneToOne(targetEntity="Videl\PublishMyCodeBundle\Entity\Post")
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $response_to;
+
+    /**
+     * @ORM\OneToOne(targetEntity="Videl\PublishMyCodeBundle\Entity\Code", cascade={"persist", "remove"})
+     */
+    private $code;
+
+
     public function __construct()
     {
         $this->date = new \DateTime();
@@ -124,5 +136,51 @@ class Post
     public function getDate()
     {
         return $this->date;
+    }
+
+    /**
+     * Set response_to
+     *
+     * @param \Videl\PublishMyCodeBundle\Entity\Post $responseTo
+     * @return Post
+     */
+    public function setResponseTo(\Videl\PublishMyCodeBundle\Entity\Post $responseTo)
+    {
+        $this->response_to = $responseTo;
+
+        return $this;
+    }
+
+    /**
+     * Get response_to
+     *
+     * @return \Videl\PublishMyCodeBundle\Entity\Post 
+     */
+    public function getResponseTo()
+    {
+        return $this->response_to;
+    }
+
+    /**
+     * Set code
+     *
+     * @param \Videl\PublishMyCodeBundle\Entity\Code $code
+     * @return code
+     */
+    public function setCode(\Videl\PublishMyCodeBundle\Entity\Code $code = null)
+    {
+        $this->code = $code;
+
+        return $this;
+    }
+
+    /**
+     * Get code
+     *
+     * @return \Videl\PublishMyCodeBundle\Entity\Code 
+     */
+    public function getCode()
+    {
+        return $this->code;
     }
 }

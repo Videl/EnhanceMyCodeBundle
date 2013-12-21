@@ -18,6 +18,7 @@ class PostType extends AbstractType
             ->add('titre')
             ->add('description')
             ->add('date')
+            ->add('code', new CodeType())
         ;
     }
     
